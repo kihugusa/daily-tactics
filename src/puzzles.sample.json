@@ -1,0 +1,14 @@
+{"v":1,"source":"Lichess puzzle database (CC0), sample for development","cols":["id","fen","moves","rating","themes"],"rows":[
+["PB2nU","2r1rk2/2pN2p1/1pQ5/p1pP2p1/P1Pb1p1q/3R3P/5PP1/4R1K1 b - - 5 34","f8g8 e1e8 c8e8 d7f6 g7f6 c6e8",1347,"advantage attraction discoveredAttack kingsideAttack long middlegame"],
+["PB2oO","5rk1/1q1n1p1p/3Qp1p1/1p2P3/8/4B1PP/1bP2PB1/5RK1 b - - 0 22","b2e5 d6f8 d7f8 g2b7",1740,"crushing master middlegame short"],
+["PB2t7","r2q1rk1/ppp2ppp/8/8/4Nb1P/3P1n2/PPP1BP2/R2Q1R1K w - - 0 15","e2f3 d8h4 h1g1 h4h2",831,"kingsideAttack mate mateIn2 middlegame short"],
+["PB36B","2k5/1p6/p2p1p1p/6p1/4Pn2/PBP2n1q/1P3Q1P/R6K w - - 0 26","a1d1 f3h2 f2h2 h3f3",1879,"crushing endgame sacrifice short"],
+["PB3Yc","r1r3Qk/1p4bp/6pN/8/3PP3/p3B3/5PPP/6K1 b - - 1 27","c8g8 h6f7",864,"endgame mate mateIn1 oneMove smotheredMate"],
+["PB3Yo","8/p1b2p1k/1p1p2p1/2p1r3/2P1n3/7P/PP3PB1/3RB2K b - - 7 34","e4g5 f2f4 e5f5 f4g5",1563,"advantage endgame fork short"],
+["PB3sB","r1b1kb1r/pp1p1ppp/2n2q2/4p3/4P3/2Q1BN2/PPP2PPP/R3KB1R w KQkq - 2 11","f1b5 f8b4 c3d2 b4d2",947,"crushing middlegame pin short"],
+["PB49R","8/8/4p3/pk2n2p/5N1P/K7/8/8 b - - 1 40","e5g6 f4g6 b5c6 g6f4 e6e5 f4h5",1714,"crushing endgame hangingPiece knightEndgame long"],
+["PB4MD","7k/6p1/3B3p/4P3/2r2r2/1QN5/PP4qP/KR5R w - - 11 36","b1f1 f4f1 h1f1 g2f1 c3b1 c4c1 b3b8 h8h7",1158,"crushing defensiveMove middlegame veryLong"],
+["PB51N","7r/1pk5/p2p4/2n1p3/2P3NB/5qPB/PP3P1K/R2R4 w - - 2 27","d1d2 h8h4 g3h4 f3f4 h2g2 f4d2",1943,"advantage fork long middlegame sacrifice"],
+["PB4kq","2k3nr/1pp2pbp/p5p1/6B1/1P6/P1NR4/2P2PPP/3K4 b - - 4 20","h7h6 d3d8",440,"endgame mate mateIn1 oneMove operaMate"],
+["PB509","2r3k1/1R3p1p/6p1/3pP3/5P2/1Q2P3/r3q1PP/5RK1 w - - 0 24","b3d5 e2f1 g1f1 c8c1 d5d1 c1d1",1859,"attraction endgame long mate mateIn3 sacrifice"]
+]}

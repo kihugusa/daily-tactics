@@ -1,0 +1,38 @@
+name: Refresh puzzles
+# Rebuilds docs/puzzles.json from the monthly Lichess puzzle export, validates every move,
+# rebuilds the site into docs/ and commits the result. Run it by hand from the Actions tab too.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 7 9 * *'
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Download and select puzzles
+        run: |
+          sudo apt-get install -y zstd >/dev/null
+          curl -sSfL -o puzzles.csv.zst https://database.lichess.org/lichess_db_puzzle.csv.zst
+          zstd -dc puzzles.csv.zst | python3 scripts/select_puzzles.py 450 > docs/puzzles.json
+          rm puzzles.csv.zst
+      - name: Validate every move
+        run: node tests/validate.mjs docs/puzzles.json
+      - name: Build site
+        run: |
+          pip install --quiet pillow
+          node build.mjs
+          cp -r dist/web/. docs/
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git diff --cached --quiet || git commit -m "Refresh puzzles from Lichess export"
+          git push
